@@ -2,7 +2,6 @@
 {
     internal class Program
     {
-
         public static List<ContactDetails> Person = new List<ContactDetails>();
 
         static void Main(string[] args)
@@ -13,6 +12,9 @@
             adressBook.DisplayContactDetails();
             adressBook.EditByFirstName();
             adressBook.DisplayContactDetails();
+            adressBook.DeleteByFirstName();
+            adressBook.DisplayContactDetails();
+
         }
     }
     
