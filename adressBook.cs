@@ -9,11 +9,13 @@ namespace AddressBook
 {
     internal class adressBook
     {
-
         public static void CreateContact()
         {
+
             ContactDetails contactDetails = new ContactDetails();
-            Console.WriteLine("Enter firstname: ");
+
+
+            Console.WriteLine("Enter Firstname: ");
             contactDetails.FirstName = Console.ReadLine();
 
             Console.WriteLine("Enter Lastname: ");
@@ -39,6 +41,11 @@ namespace AddressBook
 
             Program.Person.Add(contactDetails);
 
+
+
+
+
         }
     }
+    
 }

@@ -8,8 +8,8 @@
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Address Book");
-          
+            Console.WriteLine("Welcome to Address Book \n");
+
             adressBook.CreateContact();
         }
     }
