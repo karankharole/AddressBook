@@ -12,7 +12,19 @@ namespace AddressBook
         public Dictionary<string, person> contactDetailDictionary = new Dictionary<string, person>();
         public void AddPersonDetails(person contactDetails)
         {
-            contactDetailDictionary.Add(contactDetails.FirstName, contactDetails); // keys is mobileno. & contactDetails is a instance(object) 
+
+            var value = contactDetailDictionary.SingleOrDefault(item => item.Value.Equals(contactDetails));
+            if (value.Value == null)
+            {
+                contactDetailDictionary.Add(contactDetails.FirstName, contactDetails); // keys is mobileno. & contactDetails is a instance(object) 
+
+            }
+            else
+            {
+                Console.WriteLine("-----------------------------------");
+                Console.WriteLine("Person is already added");
+            }
+
         }
 
         public void Edit_Person_Details(person contactDetails)
@@ -37,12 +49,10 @@ namespace AddressBook
             {
                 contactDetailDictionary.Remove(contactDetails);
                 Console.WriteLine("User Deleted successfully .");
-
             }
             else
             {
                 Console.WriteLine("User does not exist.");
-
             }
 
         }

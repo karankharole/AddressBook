@@ -8,7 +8,6 @@ namespace AddressBook
 {
     internal class person
     {
-
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public long? MobileNumber { get; set; }
@@ -17,5 +16,17 @@ namespace AddressBook
         public string? City { get; set; }
         public string? State { get; set; }
         public int? zip { get; set; }
+
+        public override bool Equals(object? obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+            person person = obj as person;
+
+            return person.FirstName == FirstName;
+        }
+
     }
 }

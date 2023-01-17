@@ -7,7 +7,8 @@ namespace AddressBook
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Welcome to Address Book \n");
+
+            Console.WriteLine("Welcome to Address Book  \n");
 
             ContactDetailsRepo contactDetailsRepo = new ContactDetailsRepo();
 
@@ -30,6 +31,8 @@ namespace AddressBook
                         Console.WriteLine("Please Add All the Details :");
                         Console.Write("Enter the First Name : ");
                         string first_Name = Console.ReadLine();
+
+
                         Console.Write("Enter the Last Name : ");
                         string last_Name = Console.ReadLine();
                         Console.Write("Enter the Mobile Number : ");
@@ -62,16 +65,16 @@ namespace AddressBook
                         contactDetailsRepo.DisplayContact();
                         break;
                     case 3:
-                        Console.WriteLine(" Please Enter person Details which you want to edit : ");
+                        Console.WriteLine(" Please Enter person  Details which you want to edit : ");
                         Console.Write("Enter tha First name : ");
                         string first_Name1 = Console.ReadLine();
                         Console.Write("Enter tha Last name : ");
                         string last_Name1 = Console.ReadLine();
                         Console.Write("Enter tha Mobile Number : ");
                         string mobile_Number1 = Console.ReadLine();
-                        Console.Write("Enter tha Email Id : ");
+                        Console.Write("Enter tha  Email Id : ");
                         string email_Id1 = Console.ReadLine();
-                        Console.Write("Enter tha Address : ");
+                        Console.Write("Enter tha Address  : ");
                         string address1 = Console.ReadLine();
                         Console.Write("Enter tha City : ");
                         string city1 = Console.ReadLine();
@@ -93,7 +96,7 @@ namespace AddressBook
                         contactDetailsRepo.Edit_Person_Details(person2);
                         break;
                     case 4:
-                        Console.WriteLine("Please Enter person Details which you want to delete : ");
+                        Console.WriteLine("Please Enter person  Details which you want to delete : ");
                         Console.Write("Enter tha First name : ");
                         string first_Name2 = Console.ReadLine();
                         contactDetailsRepo.delete_Person(first_Name2);
