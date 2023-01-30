@@ -6,40 +6,58 @@ namespace AddressBook
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Adress Book program..... ");
-
-            AddressBookMain createContact = new AddressBookMain();
+            Console.WriteLine("Welcome To The Address Book Program\n===================================");
+            AddressBookMain addingContact = new AddressBookMain();
             bool end = true;
-            while (true)
+            while (end)
             {
-                Console.WriteLine("Choose an option to execute the program : \n1. Add a contact\n2. Display contact\n3." +
-                    " Edit a contact\n4. Delete a contact\n5. End the program");
+                Console.WriteLine("Choose an option to execute :\n1. Create Contact\n2. Add Contact\n3. Edit Contact\n4." +
+                    " Delete Contact\n5. View Contact\n6. Restricting Duplicate Contact\n7. End The Program");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
                     case 1:
-                        createContact.CreateContact();
+                        addingContact.AddContact();
+                        Console.WriteLine("Contact has created");
                         break;
                     case 2:
-                        createContact.Display();
+                        addingContact.AddContact();
+                        Console.WriteLine("Contact has added ");
+                        addingContact.Display();
                         break;
                     case 3:
-                        createContact.EditContact();
+                        addingContact.EditContact();
                         break;
                     case 4:
-                        createContact.DeleteContact();
+                        addingContact.DeleteContact();
                         break;
                     case 5:
-                        createContact.ViewContact();
+                        addingContact.ViewContact();
                         break;
                     case 6:
-                        end = false;
+                        MultipleAddressBook studentAddressBook = new MultipleAddressBook();
+                     
+                        studentAddressBook.AddDetails("person", "karan", "kharole", "amt", "Amravati", "Maharashtra", 444601, 9689696292, "karankharole2000@gmail.com");
+                        studentAddressBook.AddDetails("person", "chetan", "rathi", "amt", "Akola", "Maharashtra", 444601, 9689696292, "karankharole2000@gmail.com");
+                        studentAddressBook.AddDetails("person", "yogesh", "rathi", "amt", "Pune", "Maharashtra", 444601, 9689696292, "karankharole2000@gmail.com");
+                        studentAddressBook.AddDetails("person", "Raaj", "kharole", "amt", "surat", "Gujarat", 444601, 9689696292, "karankharole2000@gmail.com");
+                        studentAddressBook.AddDetails("person", "Sagar", "kharole", "amt", "Surat", "gujarat", 444601, 9689696292, "karankharole2000@gmail.com");
+                        studentAddressBook.AddDetails("person", "Kamlesh", "kharole", "amt", "Surat", "gujarat", 444601, 9689696292, "karankharole2000@gmail.com");
+                        Console.WriteLine("Enter Engineer Address Book Name : ");
+                        string addressBook = Console.ReadLine();
+                        studentAddressBook.AddressBook(addressBook);
+                        studentAddressBook.ComputeDetails();
+                        studentAddressBook.Search();
+                        studentAddressBook.Count();
                         break;
+                    
                     default:
-                        Console.WriteLine("Incorrect Option ");
+                        Console.WriteLine("Invalid option ");
+                        Console.WriteLine("Invalid option ");
                         break;
                 }
             }
+
         }
     }
 }

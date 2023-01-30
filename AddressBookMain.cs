@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 namespace AddressBook
 {
     internal class AddressBookMain
-    {
+    { //Create dictionary to store result
         Dictionary<string, string> Contacts;
         Dictionary<string, Dictionary<string, string>> AddressBook = new Dictionary<string, Dictionary<string, string>>();
         Dictionary<String, Dictionary<String, Dictionary<String, String>>> AddressBookCollection = new Dictionary<string, Dictionary<String, Dictionary<String, String>>>();
         String CurrentAddressBookName = "default";
+
         //UC1 - Create Contact
         public void CreateContact()
         {
@@ -39,7 +40,7 @@ namespace AddressBook
             Console.Write("Email Address : ");
             Contacts.Add("Email Address ", Console.ReadLine());
         }
-
+        //Adding Contact To List
         public void AddContact()
         {
             Console.WriteLine("Add contact");
@@ -83,9 +84,9 @@ namespace AddressBook
             {
                 Contacts = new Dictionary<string, string>();
                 AddressBook.TryGetValue(contactName, out Contacts);
-                Console.WriteLine("First Name: " + Contacts["first Name"]);
+                Console.WriteLine("First Name: " + Contacts["First Name"]);
 
-                Console.WriteLine("Last Name:" + Contacts["last Name"]);
+                Console.WriteLine("Last Name:" + Contacts["Last Name"]);
 
                 Console.WriteLine("Address:" + Contacts["Address"]);
 
@@ -194,7 +195,6 @@ namespace AddressBook
             else
                 Console.WriteLine("Address Book doesn't exist");
         }
-
         //Display Contact
         public void Display()
         {
@@ -204,6 +204,5 @@ namespace AddressBook
             }
         }
 
-       
     }
 }
