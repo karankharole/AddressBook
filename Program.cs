@@ -36,7 +36,7 @@ namespace AddressBook
                         break;
                     case 6:
                         MultipleAddressBook studentAddressBook = new MultipleAddressBook();
-                     
+
                         studentAddressBook.AddDetails("person", "karan", "kharole", "amt", "Amravati", "Maharashtra", 444601, 9689696292, "karankharole2000@gmail.com");
                         studentAddressBook.AddDetails("person", "chetan", "rathi", "amt", "Akola", "Maharashtra", 444601, 9689696292, "karankharole2000@gmail.com");
                         studentAddressBook.AddDetails("person", "yogesh", "rathi", "amt", "Pune", "Maharashtra", 444601, 9689696292, "karankharole2000@gmail.com");
@@ -50,14 +50,14 @@ namespace AddressBook
                         studentAddressBook.Search();
                         studentAddressBook.Count();
                         break;
-                    
+                    case 7:
+                        end = false;
+                        break;
                     default:
-                        Console.WriteLine("Invalid option ");
                         Console.WriteLine("Invalid option ");
                         break;
                 }
             }
-
         }
     }
 }

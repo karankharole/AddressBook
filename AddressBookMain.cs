@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace AddressBook
 {
     internal class AddressBookMain
-    { //Create dictionary to store result
+    {  //Create dictionary to store result
         Dictionary<string, string> Contacts;
         Dictionary<string, Dictionary<string, string>> AddressBook = new Dictionary<string, Dictionary<string, string>>();
         Dictionary<String, Dictionary<String, Dictionary<String, String>>> AddressBookCollection = new Dictionary<string, Dictionary<String, Dictionary<String, String>>>();

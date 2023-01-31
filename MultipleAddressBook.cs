@@ -8,7 +8,7 @@ namespace AddressBook
 {
     internal class MultipleAddressBook
     {
-        List <PersonDetails> contactDetailsList;
+        List<PersonDetails> contactDetailsList;
         private Dictionary<string, PersonDetails> contactDetailsMap;
         private Dictionary<string, Dictionary<string, PersonDetails>> multipleAddressBookMap;
 
